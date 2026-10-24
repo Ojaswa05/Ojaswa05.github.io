@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ojaswa Srivastava | 3D Interactive Portfolio</title>
+
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <!-- Three.js CDN & Vanilla Tilt -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.0/dist/vanilla-tilt.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- 3D Canvas Background -->
+    <canvas id="webgl-canvas"></canvas>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">
+            <span class="logo-accent"></span>Ojaswa Srivastava<span class="logo-accent"></span>
+        </div>
+        <nav class="nav-links">
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <a href="#help" class="help-nav-btn"><i class="fa-solid fa-circle-question"></i> Help & FAQs</a>
+        </nav>
+        <div class="nav-actions">
+            <a href="https://drive.google.com/file/d/1p-gFjvigDdyLzZe537vLmMuT6fYQkmYk/view?usp=sharing" class="btn-glow-sm"><i class="fa-solid fa-file-arrow-up"></i> Resume</a>
+            <button class="mobile-toggle" id="menuToggle"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="badge-status">
+                    <span class="pulse-dot"></span> Available for Data Science, Data Analysis & AI Roles
+                </div>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="gradient-text">Ojaswa Srivastava</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Data Scientist, Data Analyst & AI / Machine Learning Developer building intelligent architectures, scalable RAG agents, and interactive experiences.
+                </p>
+                <div class="hero-cta">
+                    <a href="https://github.com/Ojaswa05" class="btn-primary"><i class="fa-solid fa-rocket"></i> Explore Work</a>
+                    <a href="https://drive.google.com/file/d/1p-gFjvigDdyLzZe537vLmMuT6fYQkmYk/view?usp=sharing" class="btn-secondary"><i class="fa-solid fa-file-arrow-down"></i> Resume </a>
+                </div>
+                <div class="social-quick-links">
+                    <a href="https://github.com/Ojaswa05" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/ojaswa-srivastava-99b014324" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://x.com/770Ojaswa91152" target="_blank" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://instagram.com/ojaswasrivastava5" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- 3D Holographic Profile Card -->
+            <div class="hero-visual" data-tilt data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.4">
+                <div class="profile-card-3d">
+                    <div class="profile-frame">
+                        <!-- Replace with your actual photo in images/profile.jpg -->
+                        <img src="image.jpg" alt="Ojaswa Srivastava" id="profile-pic" class="profile-img" />
+                        <div class="avatar-ring"></div>
+                        <div class="floating-tech-badge badge-1"><i class="fa-brands fa-python"></i> Python</div>
+                        <div class="floating-tech-badge badge-2"><i class="fa-solid fa-brain"></i> GenAI / LLMs</div>
+                        <div class="floating-tech-badge badge-3"><i class="fa-solid fa-cube"></i> 3D Web</div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Ojaswa Srivastava</h3>
+                        <p>Data Science & ML Specialist</p>
+                        <div class="stats-row">
+                            <div><strong>10+</strong><span>Projects</span></div>
+                            <div><strong>95%</strong><span>Code Quality</span></div>
+                            <div><strong>24/7</strong><span>Innovation</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Objective & About Section -->
+    <section id="about" class="section-container">
+        <div class="section-header">
+            <span class="subheading">Mission & Vision</span>
+            <h2 class="heading">Career Objective & Background</h2>
+        </div>
+        <div class="about-grid">
+            <div class="about-card glass-panel" data-tilt>
+                <div class="icon-circle"><i class="fa-solid fa-bullseye"></i></div>
+                <h3>Primary Objective</h3>
+                <p>
+                    To leverage advanced Machine Learning, Natural Language Processing, and full-stack engineering skills to build next-generation intelligent applications that solve real-world industrial and commercial problems.
+                </p>
+            </div>
+            <div class="about-card glass-panel" data-tilt>
+                <div class="icon-circle"><i class="fa-solid fa-microchip"></i></div>
+                <h3>Technical Philosophy</h3>
+                <p>
+                    Fusing high-performance algorithmic modeling with intuitive 3D spatial user interfaces to make AI agents accessible, explainable, and visually captivating.
+                </p>
+            </div>
+            <div class="about-card glass-panel" data-tilt>
+                <div class="icon-circle"><i class="fa-solid fa-seedling"></i></div>
+                <h3>Continuous Growth</h3>
+                <p>
+                    Constantly expanding mastery over Large Language Models (LLMs), Vector Databases, RAG pipelines, and cloud deployment pipelines while delivering measurable business value.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section-container">
+        <div class="section-header">
+            <span class="subheading">Professional Path</span>
+            <h2 class="heading">Work Experience & Roles</h2>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item left" data-tilt data-tilt-max="8">
+                <div class="timeline-dot"><i class="fa-solid fa-briefcase"></i></div>
+                <div class="timeline-content glass-panel">
+                    <div class="role-badge">Data Science</div>
+                    <h3>Data Science Intern</h3>
+                    <h4>Developers Arena</h4>
+                    <span class="timeline-date"><i class="fa-regular fa-calendar"></i> 10 Oct 2025 - 10 Jan 2026 </span>
+                    <p>
+                        • Developed and optimized predictive machine learning pipelines and deep learning models for classification and forecasting.<br/> • Implemented exploratory data analysis (EDA), data cleaning pipelines, and automated feature engineering.<br/>                        • Collaborated on deploying containerized AI solutions with real-time inference APIs.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item right" data-tilt data-tilt-max="8">
+                <div class="timeline-dot"><i class="fa-solid fa-code"></i></div>
+                <div class="timeline-content glass-panel">
+                    <div class="role-badge">AI Development</div>
+                    <h3>AI & Machine Learning Researcher</h3>
+                    <h4>Academic & Open Source Projects</h4>
+                    <span class="timeline-date"><i class="fa-regular fa-calendar"></i> 2026 - Present</span>
+                    <p>
+                        • Designed RAG (Retrieval-Augmented Generation) agents utilizing state-of-the-art vector embedding stores.<br/> • Built Stock price prediction web apps for financial market equity price tracking and automated indicators.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-container">
+        <div class="section-header">
+            <span class="subheading">Core Strengths</span>
+            <h2 class="heading">Technical & Functional Skills</h2>
+        </div>
+        <div class="skills-matrix">
+            <div class="skill-category glass-panel">
+                <h3><i class="fa-solid fa-brain"></i> Machine Learning & AI</h3>
+                <div class="skill-tags">
+                    <span class="tag">NLP & Generative AI (RAG Pipelines, LLMs, Vector Databases & Prompt Engineering)</span>
+                    <span class="tag">Supervised & Unsupervised Learning</span>
+                    <span class="tag">Deep Learning Framework</span>
+                    <span class="tag">Feature Engineering</span>
+                    <span class="tag">Model Evaluation & Tuning</span>
+                </div>
+            </div>
+
+            <div class="skill-category glass-panel">
+                <h3><i class="fa-solid fa-code"></i> Programming & Web</h3>
+                <div class="skill-tags">
+                    <span class="tag">Python / R</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">API Development</span>
+                    <span class="tag">Web Dashboards & Front-end Basics</span>
+                    <span class="tag">Agentic AI</span>
+                    <span class="tag">PowerShell / Bash</span>
+                </div>
+            </div>
+
+            <div class="skill-category glass-panel">
+                <h3><i class="fa-solid fa-chart-line"></i> Data Science & Analysis</h3>
+                <div class="skill-tags">
+                    <span class="tag">Exploratory Data Analysis</span>
+                    <span class="tag">Data Visualization</span>
+                    <span class="tag">Data Preprocessing</span>
+                    <span class="tag">Applied Mathematics & Statistics</span>
+                    <span class="tag">Statistical Modeling</span>
+                    <span class="tag">Microsoft Excel</span>
+                </div>
+            </div>
+
+            <div class="skill-category glass-panel">
+                <h3><i class="fa-solid fa-gears"></i> Tools & Engineering</h3>
+                <div class="skill-tags">
+                    <span class="tag">Git & Github</span>
+                    <span class="tag">Jupyter / VS Code</span>
+                    <span class="tag">PostgreSQL / MySQL</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">Cloud Platforms (AWS/Google Cloud or Azure/Oracle)</span>
+                    <span class="tag">Data Pipelines & Big Data</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Management Section (Upload & Download) -->
+    <section id="resume-section" class="section-container">
+        <div class="section-header">
+            <span class="subheading">Curriculum Vitae</span>
+            <h2 class="heading">Resume Vault & Uploader</h2>
+        </div>
+        <div class="resume-wrapper glass-panel">
+            <div class="resume-info">
+                <div class="resume-icon-box">
+                    <i class="fa-solid fa-file-pdf"></i>
+                </div>
+                <div>
+                    <h3>Ojaswa Srivastava — Official Resume</h3>
+                    <p>Updated Data Science, AI Agent Development, and Technical Skill Profile (PDF Format).</p>
+                </div>
+            </div>
+            <div class="resume-actions">
+                <!-- Download Button -->
+                <a href="https://drive.google.com/file/d/1p-gFjvigDdyLzZe537vLmMuT6fYQkmYk/view?usp=sharing" download="Ojaswa_Srivastava_Resume.pdf" class="btn-primary" id="downloadResumeBtn">
+                    <i class="fa-solid fa-download"></i> Download Resume
+                </a>
+
+                <!-- Upload Button with custom file input -->
+                <label for="resumeUploadInput" class="btn-secondary upload-btn-label">
+          <i class="fa-solid fa-cloud-arrow-up"></i> Upload New Resume
+        </label>
+                <input type="file" id="resumeUploadInput" accept=".pdf,.doc,.docx,.txt" style="display:none;" />
+            </div>
+            <!-- Upload Feedback message -->
+            <div id="uploadFeedback" class="upload-feedback"></div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-container">
+        <div class="section-header">
+            <span class="subheading">Featured Innovations</span>
+            <h2 class="heading">Signature AI & Data Projects</h2>
+        </div>
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card glass-panel" data-tilt>
+                <div class="project-banner p-gradient-1">
+                    <i class="fa-solid fa-robot project-bg-icon"></i>
+                    <span class="project-badge">GenAI & RAG</span>
+                </div>
+                <div class="project-body">
+                    <h3>RAG-Based AI Knowledge Agent</h3>
+                    <p>
+                       An intelligent tutoring assistant built to answer student queries strictly using real course lecture materials rather than generic web knowledge. When a student asks a conceptual question the agent uses RAG : It searches vectorized lecture transcripts and notes to pull the exact relevant timestamps and explanations, then uses an LLM to teach the concept step-by-step.
+                    </p>
+                    <div class="project-tech">
+                        <span>FFmpeg</span>
+                        <span>Ollama (bge-m3 & Llama3.2 models)</span>
+                        <span>Python</span>
+                        <span>OpenAI Whisper Large-v2</span>
+                        <span>joblib, JSON, requests modules</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Ojaswa05/RAG-Based-AI-Knowledge-Agent" class="p-link"><i class="fa-brands fa-github"></i> Source Code</a>
+                        <a href="https://github.com/Ojaswa05/RAG-Based-AI-Knowledge-Agent" class="p-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card glass-panel" data-tilt>
+                <div class="project-banner p-gradient-2">
+                    <i class="fa-solid fa-chart-line project-bg-icon"></i>
+                    <span class="project-badge">FinTech / LSTM</span>
+                </div>
+                <div class="project-body">
+                    <h3>Stock Price Prediction Web App</h3>
+                    <p>
+                        Developed a machine learning-based web application that analyzes historical stock market data and predicts stock price trends using a Long Short-Term Memory (LSTM) neural network. The application uses historical Apple Inc. (AAPL) stock data, applies data preprocessing and MinMax scaling, and trains the model on sequential price observations to forecast future price values.
+                    </p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Streamlit</span>
+                        <span>LSTM</span>
+                        <span>Scikit-Learn MinMaxScaler</span>
+                        <span>TensorFlow/Keras</span>
+                        <span>yfinance</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Ojaswa05/Stock-Price-Prediction-Web-App" class="p-link"><i class="fa-brands fa-github"></i> Source Code</a>
+                        <a href="https://github.com/Ojaswa05/Stock-Price-Prediction-Web-App" class="p-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card glass-panel" data-tilt>
+                <div class="project-banner p-gradient-3">
+                    <i class="fa-solid fa-cubes project-bg-icon"></i>
+                    <span class="project-badge">Time Series ML</span>
+                </div>
+                <div class="project-body">
+                    <h3>Time Series Forecasting Using ARIMA</h3>
+                    <p>
+                        Developed a time series forecasting project using ARIMA (AutoRegressive Integrated Moving Average) to analyze and forecast electricity demand and solar power generation in Italy. The project uses hourly energy data from 2016 to explore historical patterns, identify trends, and predict future values.
+                    </p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Statsmodels</span>
+                        <span>Time Series Analysis</span>
+                        <span>ARIMA</span>
+                        <span>Data Visualization</span>
+                        <span>Model Evaluation</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Ojaswa05/Time-Series-Forecasting-using-ARIMA" class="p-link"><i class="fa-brands fa-github"></i> Source Code</a>
+                        <a href="https://github.com/Ojaswa05/Time-Series-Forecasting-using-ARIMA" class="p-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Help & FAQ Section -->
+    <section id="help" class="section-container">
+        <div class="section-header">
+            <span class="subheading">Support & Clarifications</span>
+            <h2 class="heading"><i class="fa-solid fa-circle-question"></i> Help & Frequently Asked Questions</h2>
+        </div>
+        <div class="help-container glass-panel">
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">
+            <span>How can I hire or collaborate with Ojaswa?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+                    <div class="accordion-body">
+                        <p>You can send an inquiry directly via the Contact form below, email me at <code>ojaswasrivastava05192876@gmail.com</code>, or connect via LinkedIn. I'm actively open for Data Science, Data Analysis, AI Engineer, and Machine Learning
+                            opportunities.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+            <span>How does the Resume upload/update system work?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+                    <div class="accordion-body">
+                        <p>Click on the "Upload New Resume" button in the Resume section. You can select your latest PDF or Word document. The file is validated and stored in your local session for instant preview and download.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+            <span>What are Ojaswa's key technical specialties?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+                    <div class="accordion-body">
+                        <p>End-to-end Machine Learning pipelines, RAG-driven AI agents, LLM integrations, Predictive Analysis, Python Data Science toolkits, and 3D Web interface development.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+            <span>Can I customize this portfolio with my own photo and details?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+                    <div class="accordion-body">
+                        <p>Yes! Simply replace the photo URL in <code>index.html</code> (search for <code>id="profile-pic"</code>) and edit the text sections or link your real social handles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-container">
+        <div class="section-header">
+            <span class="subheading">Get In Touch</span>
+            <h2 class="heading">Let's Build Something Exceptional</h2>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-card glass-panel">
+                <h3>Contact Information</h3>
+                <p>Feel free to reach out for project inquiries, freelance consulting, or full-time roles.</p>
+                <div class="contact-details">
+                    <div class="c-item"><i class="fa-solid fa-user-tie"></i> <strong>Name:</strong> Ojaswa Srivastava</div>
+                    <div class="c-item"><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> ojaswasrivastava05192876@gmail.com</div>
+                    <div class="c-item"><i class="fa-solid fa-location-dot"></i> <strong>Location:</strong> India (Open to Remote / Relocation)</div>
+                    <div class="c-item"><i class="fa-solid fa-shield-halved"></i> <strong>Status:</strong> Available</div>
+                </div>
+            </div>
+
+            <div class="contact-form-box glass-panel">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <!-- Apni access key yahan paste karein -->
+                    <input type="hidden" name="access_key" value="268886d4-f11e-47ff-af0d-6aa030440681" />
+
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" name="name" placeholder="e.g. John Doe" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Your Email</label>
+                        <input type="email" name="email" placeholder="john@example.com" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea name="message" rows="4" placeholder="Describe your project, offer, or question..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary full-width">
+    <i class="fa-solid fa-paper-plane"></i> Send Message
+  </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer & All Social Media Buttons -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-logo">
+                <h2>Ojaswa Srivastava</h2>
+                <p>Data Scientist • Data Analyst • AI/ML Engineer</p>
+            </div>
+
+            <!-- Social Media Buttons with Logos -->
+            <div class="social-channels">
+                <h4>Connect Across Platforms</h4>
+                <div class="social-buttons-grid">
+                    <a href="https://www.linkedin.com/in/ojaswa-srivastava-99b014324/" target="_blank" class="social-btn linkedin-btn">
+                        <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/Ojaswa05" target="_blank" class="social-btn github-btn">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                    <a href="https://x.com/770Ojaswa91152" target="_blank" class="social-btn twitter-btn">
+                        <i class="fa-brands fa-x-twitter"></i> Twitter / X
+                    </a>
+                    <a href="https://www.instagram.com/ojaswasrivastava5" target="_blank" class="social-btn insta-btn">
+                        <i class="fa-brands fa-instagram"></i> Instagram
+                    </a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ojaswasrivastava05192876@gmail.com" target="_blank" class="social-btn email-btn">
+                        <i class="fa-solid fa-envelope"></i> Direct Email
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Ojaswa Srivastava.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive 3D Background & Logic Scripts -->
+    <script src="three-bg.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

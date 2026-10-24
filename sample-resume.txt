@@ -1,0 +1,34 @@
+========================================================================
+                      OJASWA SRIVASTAVA
+             Data Science Intern | AI & ML Developer
+         Location: India | Email: ojaswa.dev@example.com
+========================================================================
+
+CAREER OBJECTIVE:
+Dedicated and detail-oriented Data Science Intern with strong hands-on
+experience in building Predictive Machine Learning Pipelines, Large
+Language Model (LLM) RAG Agents, and Deep Learning applications. Passionate
+about bridging mathematical algorithms with interactive software solutions.
+
+TECHNICAL SKILLS:
+- Languages: Python (Proficient), JavaScript, SQL, C++, HTML5/CSS3
+- AI & ML: Scikit-Learn, TensorFlow, PyTorch, LangChain, Transformers, NLP
+- Data Analysis: Pandas, NumPy, Matplotlib, Seaborn, Feature Engineering
+- Web & Tools: Three.js, WebGL, FastAPI, Streamlit, Docker, Git, ChromaDB
+
+PROFESSIONAL EXPERIENCE:
+1. Data Science Intern | Developers Arena (2026 - Present)
+   - Built end-to-end data preprocessing, model selection, and hyperparameter tuning.
+   - Deployed high-throughput prediction endpoints and optimized feature sets.
+
+FEATURED PROJECTS:
+1. RAG-Based AI Knowledge Agent
+   - Vector database-driven agent providing real-time document search and zero-shot reasoning.
+2. Stock Price Prediction Web App
+   - LSTM neural network forecasting equity indicators with interactive charts.
+3. 3D WebGL Data Visualizer
+   - Interactive high-dimensional data cluster spatial representation.
+
+EDUCATION:
+- Bachelor of Technology in Computer Science / Data Science
+========================================================================
