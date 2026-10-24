@@ -1,6 +1,6 @@
 <div align="center">
 
-# Ojaswa Srivastava
+# Ojaswa Srivastava Portfolio
 ### Data Science · AI / Machine Learning · Interactive 3D
 
 **A dark, immersive portfolio where data-driven work meets a living, interactive canvas.**
